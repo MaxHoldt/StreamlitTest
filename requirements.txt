@@ -1,5 +1,4 @@
 streamlit
-sys
 math
 pandas
 numpy
