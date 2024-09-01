@@ -1,5 +1,4 @@
 import streamlit as st
-import sys
 import math
 import pandas as pd
 import numpy as np
@@ -16,17 +15,17 @@ import shap
 
 df=pd.read_csv("weatherAUS.csv")
 
-df_final=pd.read_csv(".\Final\weatherAUS_Agglomeration.csv")
+#df_final=pd.read_csv(".\Final\weatherAUS_Agglomeration.csv")
 
-target = df_final['RainTomorrow']
-data = df_final.drop(['RainTomorrow', 'Date', 'Location'], axis = 1)
-X, X_valid, y, y_valid = train_test_split(data, target, test_size=0.1, random_state=10)
-rOs = RandomOverSampler()
-X_ro, y_ro = rOs.fit_resample(X, y)
-X_train_ro, X_test_ro, y_train_ro, y_test_ro = train_test_split(X_ro, y_ro, test_size=0.2, random_state=20)
-train_ro = xgb.DMatrix(data=X_train_ro, label=y_train_ro)
-test_ro = xgb.DMatrix(data=X_test_ro, label=y_test_ro)
-valid = xgb.DMatrix(data=X_valid, label=y_valid)
+#target = df_final['RainTomorrow']
+#data = df_final.drop(['RainTomorrow', 'Date', 'Location'], axis = 1)
+#X, X_valid, y, y_valid = train_test_split(data, target, test_size=0.1, random_state=10)
+#rOs = RandomOverSampler()
+#X_ro, y_ro = rOs.fit_resample(X, y)
+#X_train_ro, X_test_ro, y_train_ro, y_test_ro = train_test_split(X_ro, y_ro, test_size=0.2, random_state=20)
+#train_ro = xgb.DMatrix(data=X_train_ro, label=y_train_ro)
+#test_ro = xgb.DMatrix(data=X_test_ro, label=y_test_ro)
+#valid = xgb.DMatrix(data=X_valid, label=y_valid)
 
 xgb_model = joblib.load('xgb_model.sav')
 
