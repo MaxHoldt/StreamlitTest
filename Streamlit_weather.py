@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 import xgboost as xgb
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-from sklearn.metrics import accuracy_score
+from scikit-learn.model_selection import train_test_split
+from scikit-learn.metrics import classification_report
+from scikit-learn.metrics import accuracy_score
 from imblearn.over_sampling import RandomOverSampler
 import plotly.express as px
 import shap
