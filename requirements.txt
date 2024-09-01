@@ -5,8 +5,7 @@ matplotlib
 seaborn
 joblib
 xgboost
-sklearn.model_selection
-sklearn.metrics
-imblearn.over_sampling
-plotly.express
+sklearn
+imblearn
+plotly
 shap
