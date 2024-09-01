@@ -6,7 +6,6 @@ seaborn
 joblib
 xgboost
 scikit-learn
-sklearn
 imblearn
 plotly
 shap
